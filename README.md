@@ -1,48 +1,3 @@
-Conversation opened. 1 unread message.
-
-Skip to content
-Using Gmail with screen readers
-1 of 14,968
-sfvfvfv
-Inbox
-
-Kartal, Mustafa <mustafa.kartal@msd.com>
-Attachments
-23:11 (0 minutes ago)
-to me
-
-It looks like this message is in English
-Proprietary
-
-
-
-Kind regards,
-
-Mustafa Kartal
-
-MSD
-
-Data Center Networking
-
- 
-
-A.  FIVE Building, Na Valentince 3336/4, Prague, 15500
-
-M. +420 776 309 046
-
-MSD.com
-
-cid6763*image001.png@01D9371D.EF9D4120
-
- 
-
- 
-
-This e-mail message, together with any attachments, contains information of Merck & Co., Inc.,Rahway, NJ, USA,  and/or its affiliates, known as MSD outside of the United States and Canada, that may be confidential, proprietary, copyrighted and/or legally privileged. (Direct contact information for affiliates is available at - Contact us - MSD.)  It is intended solely for the use of the individual or entity named on this message. If you are not the intended recipient, and have received this message in error, please notify us immediately by reply e-mail and then delete it from your system.
-
-One attachment
-  • Scanned by Gmail
-Updated!Pic?Here you go!
 # Observability for OpenTelemetry Demo on GCP
 
 This document outlines the approach and design decisions for enhancing the observability of the OpenTelemetry Demo application deployed on Google Kubernetes Engine (GKE). The goal is to provide comprehensive, production-ready monitoring and alerting capabilities as per the assignment requirements.
@@ -451,5 +406,3 @@ This observability implementation demonstrates several critical production skill
 
 The implementation balances comprehensive monitoring coverage with actionable insights, avoiding both blind spots and alert fatigue - essential for production operations.
 
-README.md
-Displaying README.md.
