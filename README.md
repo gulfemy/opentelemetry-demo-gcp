@@ -70,9 +70,6 @@ The dashboard is organized into two main sections: **System Health** and **RED M
 
 #### RED Metrics Section
 
-![RED Metrics Detail](MyDashboard02.png)
-*Detailed RED metrics showing Rate, Errors, and Duration for comprehensive service monitoring*
-
 **3. Request Rate**
 - **Query**: Complex query using `label_join` and `label_replace` to create readable service/route combinations
 - **Purpose**: Shows the number of HTTP requests per second, broken down by service and route
