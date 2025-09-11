@@ -29,7 +29,8 @@ The Grafana dashboard follows a structured observability approach, integrating m
 
 **Navigation Integration**: A direct Jaeger link is positioned at the top of the dashboard (next to service filters), enabling engineers to seamlessly transition from metrics/logs to distributed tracing. Users can take trace IDs from logs and directly investigate detailed request paths in Jaeger.
 
-![Jaeger Navigation Integration](MyDashboard01.png)
+![Jaeger Navigation Integration](<img width="192" height="79" alt="image" src="https://github.com/user-attachments/assets/3c45956e-950c-41ec-858a-a1065d813a96" />
+)
 *Dashboard header showing Jaeger link positioned next to service filters for seamless trace investigation*
 
 **Core Design Principles:**
