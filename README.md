@@ -15,6 +15,40 @@ The OpenTelemetry Demo application was deployed on Google Kubernetes Engine (GKE
 - **Built-in Telemetry**: Automatic metrics, traces, and logs collection
 
 The demo includes realistic services (frontend, cart, checkout, payment, etc.) with comprehensive OpenTelemetry instrumentation, providing rich observability data for monitoring and alerting.
+## Deployment Steps
+
+### 1.a Provision Infrastructure with Terraform
+
+Initialize and deploy the infrastructure defined in the `.tf` files:
+
+
+terraform init
+terraform plan
+terraform apply
+text
+
+### 1.b Acquire GKE Cluster Credentials
+
+Configure your environment and retrieve credentials to interact with the GKE cluster:
+
+
+gcloud config set project <your-gcp-project>
+gcloud container clusters get-credentials otel-demo-gke --region us-central1 --project <your-gcp-project>
+text
+
+### 1.c Access Key Services with Port Forwarding
+
+Enable local access to observability services in the `otel-demo` namespace:
+kubectl port-forward -n otel-demo svc/prometheus 9090:9090
+kubectl port-forward -n otel-demo svc/grafana 3000:80
+kubectl port-forward -n otel-demo svc/frontend-proxy 8080:8080
+
+You are ready to use all enviranmen via these links:
+http://localhost:8080 -- The e-shop website 
+http://localhost:3000 -- Grafana 
+http://localhost:8080/jaeger/ui  -- Jaeger 
+http://localhost:8080/feature   -- Flagd configurator 
+http://localhost:9090/   -- Prometheus 
 
 ## 2. Metrics Visualization and Dashboarding
 
