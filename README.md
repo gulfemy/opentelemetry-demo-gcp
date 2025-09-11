@@ -27,28 +27,50 @@ terraform plan
 terraform apply
 text
 
-### B. Acquire GKE Cluster Credentials
+### B. Configure GKE Cluster Access
 
-Configure your environment and retrieve credentials to interact with the GKE cluster:
+Set up your local environment to interact with the GKE cluster:
 
+```bash
+# Configure your GCP project
+gcloud config set project <your-gcp-project>
 
-gcloud config set project <your-gcp-project>
-gcloud container clusters get-credentials otel-demo-gke --region us-central1 --project <your-gcp-project>
-text
+# Retrieve cluster credentials
+gcloud container clusters get-credentials otel-demo-gke \
+  --region us-central1 \
+  --project <your-gcp-project>
+```
 
-### C. Access Key Services with Port Forwarding
+> **Note:** Replace `<your-gcp-project>` with your actual GCP project ID
 
-Enable local access to observability services in the `otel-demo` namespace:
+### C. Access Observability Services
+
+Use port forwarding to access the demo services locally. Run these commands in separate terminal windows:
+
+```bash
+# Access Prometheus (metrics)
 kubectl port-forward -n otel-demo svc/prometheus 9090:9090
-kubectl port-forward -n otel-demo svc/grafana 3000:80
-kubectl port-forward -n otel-demo svc/frontend-proxy 8080:8080
 
-You are ready to use all enviranmen via these links:
-- http://localhost:8080 -- The e-shop website 
-- http://localhost:3000 -- Grafana 
-- http://localhost:8080/jaeger/ui  -- Jaeger 
-- http://localhost:8080/feature   -- Flagd configurator 
-- http://localhost:9090/   -- Prometheus 
+# Access Grafana (dashboards)  
+kubectl port-forward -n otel-demo svc/grafana 3000:80
+
+# Access Demo Frontend
+kubectl port-forward -n otel-demo svc/frontend-proxy 8080:8080
+```
+
+### 🚀 Access Your Environment
+
+Once the port forwarding is active, you can explore the full observability stack:
+
+| Service | URL | Description |
+|---------|-----|-------------|
+| **E-shop Demo** | http://localhost:8080 | Main application frontend |
+| **Grafana** | http://localhost:3000 | Dashboards and visualization |
+| **Jaeger** | http://localhost:8080/jaeger/ui | Distributed tracing |
+| **Feature Flags** | http://localhost:8080/feature | Flagd configurator |
+| **Prometheus** | http://localhost:9090 | Metrics and monitoring |
+
+> **Tip:** Keep the port-forward commands running in separate terminals while exploring the demo environment
 
 Official OpenTelemetry Demo Documentation: https://opentelemetry.io/docs/demo/
 ## 2. Metrics Visualization and Dashboarding
