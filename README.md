@@ -317,7 +317,24 @@ time_window: "10 minutes"
 
 ### Alert Notification Integration
 
-All alerts integrate with **Discord** for immediate team notification:
+All alerts integrate with **Discord** for immediate team notification.
+
+### Adding Discord Webhook to Grafana
+
+1. **Get Discord Webhook URL:**
+   - Go to your Discord channel → Settings ⚙️ → Integrations → Webhooks
+   - Create webhook and copy the URL
+
+2. **Configure in Grafana:**
+   - Navigate to **Alerting** → **Contact Points**
+   - Click **New contact point**
+   - Choose **Discord** as contact type
+   - Paste your webhook URL
+   - Save the contact point
+
+3. **Test the integration** using the test button in Grafana
+
+Your alerts will now be sent directly to Discord.
 
 #### Active Alert Notification
 ![Discord Alert](Secreenshots/Discord-messageforalert.png)
