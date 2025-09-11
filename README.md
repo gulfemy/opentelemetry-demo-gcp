@@ -42,7 +42,7 @@ The Grafana dashboard follows a structured observability approach, integrating m
 
 The dashboard includes template variables for service filtering, allowing engineers to focus on specific services or view system-wide metrics across all services simultaneously.
 
-![Dashboard Overview](MyDashboard01.png)
+![Dashboard Overview](Secreenshots/MyDashboard01.png)
 *Main dashboard view showing the complete observability suite with System Health and RED metrics sections*
 
 ### Detailed Dashboard Panel Analysis
