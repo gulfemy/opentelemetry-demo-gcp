@@ -336,17 +336,22 @@ This observability implementation demonstrates several critical production skill
 
 ### Repository Structure
 ```
-├── main.tf                           # Terraform: GCP resources and providers
-├── variables.tf                      # Terraform: Configurable parameters  
-├── outputs.tf                        # Terraform: Cluster connection info
-├── gke_and_app.tf                   # Terraform: GKE and Helm deployment
-├── alert-rules-1757538351495.json   # Grafana: 6 comprehensive alert definitions
-├── My Dashboard-1757532431060.json  # Grafana: Multi-source dashboard configuration
-├── MyDashboard01.png                # Visual: Dashboard overview with navigation
-├── MyDashboard02.png                # Visual: RED metrics and log analysis detail
-├── Discord-messageforalert.png      # Visual: Alert notification example
-├── Discord-messageforresolved.png   # Visual: Resolution notification example
-└── README.md                        # Implementation documentation
+Repository Structure
+--------------------
+
+├── main.tf                          # Terraform: GCP resources and providers  
+├── variables.tf                    # Terraform: Configurable parameters  
+├── outputs.tf                      # Terraform: Cluster connection info  
+├── gke_and_app.tf                  # Terraform: GKE and Helm deployment  
+├── alert-rules-1757538351495.json # Grafana: 6 comprehensive alert definitions  
+├── My Dashboard-1757532431060.json # Grafana: Multi-source dashboard configuration
+
+└── Screenshots/                    # Directory containing all screenshot images  
+    ├── Discord-messageforalert.png      # Discord alert notification in channel  
+    ├── Discord-messageforresolved.png   # Discord alert resolution notification  
+    ├── MyDashboard01.png                 # First part of dashboard (System Health + RED)  
+    ├── MyDashboard02.png                 # Second part of dashboard (Logs + Trace path)  
+    └── Jaeger_navi.png                   # Jaeger navigator image  
 ```
 
 This solution demonstrates production-ready observability engineering with focus on actionable monitoring, intelligent alerting, and comprehensive incident response workflows using real-world tools and best practices.
