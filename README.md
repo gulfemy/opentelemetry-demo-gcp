@@ -19,13 +19,20 @@ The demo includes realistic services (frontend, cart, checkout, payment, etc.) w
 
 ### A. Provision Infrastructure with Terraform
 
-Initialize and deploy the infrastructure defined in the `.tf` files:
+Initialize and deploy the infrastructure using the Terraform configuration files:
 
-
+```bash
+# Initialize Terraform (downloads required providers)
 terraform init
+
+# Preview the infrastructure changes
 terraform plan
+
+# Deploy the infrastructure
 terraform apply
-text
+```
+
+> **Note:** Review the `terraform plan` output carefully before running `apply`. Type `yes` when prompted to confirm the deployment.
 
 ### B. Configure GKE Cluster Access
 
