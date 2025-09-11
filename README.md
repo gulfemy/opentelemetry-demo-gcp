@@ -222,7 +222,7 @@ evaluation_time: "1 minute"
 **Configuration:**
 ```yaml
 title: "Pod CPU %"
-query: "100 * sum(rate(container_cpu_usage_seconds_total{namespace=\"otel-demo\"}[5m])) by (pod) / 12"
+query: "100 * sum(rate(container_cpu_usage_seconds_total{namespace=\"otel-demo\"}[5m])) by (pod) / scalar(sum(machine_cpu_cores)"
 threshold: "> 60%"
 evaluation_time: "1 minute"
 ```
