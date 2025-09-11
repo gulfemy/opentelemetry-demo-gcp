@@ -51,7 +51,7 @@ The dashboard is organized into multiple rows: **System Health**, **RED Metrics*
 
 #### System Health Section
 
-![System Health Section](MyDashboard01.png)
+![System Health Section](Secreenshots/MyDashboard01.png)
 *Top section showing infrastructure health metrics*
 
 **1. Pod CPU Usage (%)**
@@ -85,6 +85,8 @@ The dashboard is organized into multiple rows: **System Health**, **RED Metrics*
 - **Actionability**: Helps identify slow endpoints that may need optimization
 
 #### Log Monitoring Section
+![Log Monitoring Section](Secreenshots/MyDashboard02.png)
+*Top section showing Log Monitoring Section*
 
 **6. Application Log Records & Log Records by Severity**
 - **Data Source**: OpenSearch logs from the otel-demo namespace
@@ -254,11 +256,11 @@ time_window: "10 minutes"
 All alerts integrate with **Discord** for immediate team notification:
 
 #### Active Alert Notification
-![Discord Alert](Discord-messageforalert.png)
+![Discord Alert](Secreenshots/Discord-messageforalert.png)
 *Discord alert notification showing the triggered condition, affected service, and direct link to dashboard for immediate investigation*
 
 #### Resolution Notification
-![Discord Resolved](Discord-messageforresolved.png)
+![Discord Resolved](Secreenshots/Discord-messageforresolved.png)
 *Resolution notification confirming the alert has cleared, providing closure for the incident*
 
 **Alert Message Benefits:**
