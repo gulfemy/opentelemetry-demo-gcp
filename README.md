@@ -50,7 +50,6 @@ You are ready to use all enviranmen via these links:
 - http://localhost:8080/feature   -- Flagd configurator 
 - http://localhost:9090/   -- Prometheus 
 
-Reference:
 Official OpenTelemetry Demo Documentation: https://opentelemetry.io/docs/demo/
 ## 2. Metrics Visualization and Dashboarding
 
